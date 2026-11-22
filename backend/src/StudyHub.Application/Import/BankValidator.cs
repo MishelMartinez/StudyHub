@@ -17,9 +17,16 @@ public class ValidatedBank
     public List<ImportIssue> Issues { get; } = new();
     public string Hash { get; init; } = "";
 
-    /// <summary>Root-level errors (malformed JSON, missing fields, duplicate IDs) block the import.</summary>
-    public bool CanCommit => File?.Preguntas != null && !Issues.Any(i => i.Severity == ImportIssue.Error && i.QuestionId == null)
-                             && !Issues.Any(i => i.Code == "id_duplicado");
+    /// <summary>Codes that make a question impossible to store; answer-key inconsistencies only flag it for review.</summary>
+    public static readonly HashSet<string> BlockingCodes = new()
+    {
+        "id_duplicado", "enunciado_faltante", "modulo_faltante", "tipo_invalido",
+        "opciones_insuficientes", "opcion_incompleta", "opcion_duplicada", "opcion_nula",
+    };
+
+    /// <summary>Root-level errors and structural question errors block the import.</summary>
+    public bool CanCommit => File?.Preguntas != null && !Issues.Any(i => i.Severity == ImportIssue.Error &&
+                             (i.QuestionId == null || BlockingCodes.Contains(i.Code)));
 
     public List<string> IssuesFor(int questionId) => Issues
         .Where(i => i.QuestionId == questionId && i.Severity == ImportIssue.Error)
