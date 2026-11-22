@@ -123,8 +123,8 @@ public static partial class BankValidator
         if (options.Any(o => o.EsCorrecta == null))
             Err("escorrecta_faltante", "Hay opciones sin «esCorrecta».");
         var optionIds = options.Where(o => !string.IsNullOrWhiteSpace(o.Id)).Select(o => o.Id!).ToList();
-        foreach (var dup in optionIds.GroupBy(x => x).Where(g => g.Count() > 1))
-            Err("opcion_duplicada", $"La opción «{dup.Key}» está repetida.");
+        foreach (var dup in optionIds.GroupBy(x => x.Trim(), StringComparer.OrdinalIgnoreCase).Where(g => g.Count() > 1))
+            Err("opcion_duplicada", $"La opción «{dup.Key}» está repetida (sin distinguir mayúsculas).");
 
         var answers = q.RespuestasCorrectas ?? new();
         if (answers.Count == 0) Err("respuestas_faltantes", "«respuestasCorrectas» está vacío.");
