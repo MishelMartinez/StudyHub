@@ -82,6 +82,10 @@ public static partial class BankValidator
             result.Issues.Add(new(null, ImportIssue.Warning, "conteo_distinto",
                 $"«totalPreguntas» declara {file.TotalPreguntas} pero el archivo contiene {file.Preguntas.Count}."));
 
+        var nullCount = file.Preguntas.RemoveAll(q => q == null);
+        if (nullCount > 0)
+            result.Issues.Add(new(null, ImportIssue.Error, "pregunta_nula", $"El arreglo «preguntas» contiene {nullCount} elemento(s) nulo(s)."));
+
         for (var i = 0; i < file.Preguntas.Count; i++)
         {
             var q = file.Preguntas[i];
@@ -110,6 +114,8 @@ public static partial class BankValidator
         if (!QuestionTypes.IsValid(q.Tipo)) Err("tipo_invalido", $"«tipo» debe ser «unica» o «multiple» (recibido: «{q.Tipo}»).");
         if (!OriginalStates.IsKnown(q.Estado)) Warn("estado_desconocido", $"«estado» desconocido: «{q.Estado}».");
 
+        if (q.Opciones != null && q.Opciones.RemoveAll(o => o == null) > 0)
+            Err("opcion_nula", "«opciones» contiene elementos nulos.");
         var options = q.Opciones ?? new();
         if (options.Count < 2) Err("opciones_insuficientes", "La pregunta necesita al menos dos opciones.");
         if (options.Any(o => string.IsNullOrWhiteSpace(o.Id) || string.IsNullOrWhiteSpace(o.Texto)))
