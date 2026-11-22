@@ -1,0 +1,17 @@
+bin/
+obj/
+node_modules/
+dist/
+*.db
+*.db-shm
+*.db-wal
+.vs/
+.vscode/
+*.user
+.env
+.env.*
+!.env.example
+backend/src/StudyHub.Api/wwwroot/
+TestResults/
+playwright-report/
+test-results/

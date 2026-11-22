@@ -1,0 +1,3745 @@
+{
+  "titulo": "Banco de estudio AWS re/Start",
+  "version": "1.0",
+  "totalPreguntas": 102,
+  "nota": "Transcripción revisada de capturas del curso, sin duplicados. Respuestas y explicaciones razonadas, no certificadas por una clave oficial. Los casos ambiguos se marcan para revisión. La numeración corresponde al orden de capturas recuperadas.",
+  "preguntas": [
+    {
+      "id": 1,
+      "modulo": "Amazon S3",
+      "pregunta": "¿Cuántos nueves de durabilidad está diseñado para proporcionar Amazon S3?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "8 nueves (99.999999%)",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "4 nueves (99.99%)",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "11 nueves (99.999999999%)",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "6 nueves (99.9999%)",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "C"
+      ],
+      "explicacion": "S3 está diseñado para una durabilidad anual de 99.999999999%. No equivale a disponibilidad.",
+      "reglaParaMemorizar": "S3 = 11 nueves de durabilidad.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261110-042436).png"
+    },
+    {
+      "id": 2,
+      "modulo": "Amazon S3",
+      "pregunta": "Una empresa financiera desea utilizar la solución de Amazon S3 de menor precio para un almacenamiento a largo plazo. Necesitarán acceder a sus datos solo una o dos veces al año. ¿Qué clase de almacenamiento de Amazon S3 deberían elegir?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "S3 Glacier Deep Archive",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "S3 Standard-Infrequent Access (S3 Standard-IA)",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "S3 Standard",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "S3 One Zone-Infrequent Access (S3 One Zone-IA)",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A"
+      ],
+      "explicacion": "Deep Archive está orientado a archivo de largo plazo y acceso muy infrecuente; la recuperación tarda horas.",
+      "reglaParaMemorizar": "Acceso 1–2 veces al año = Deep Archive.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261110-042523).png"
+    },
+    {
+      "id": 3,
+      "modulo": "Amazon S3",
+      "pregunta": "¿Qué acción genera un coste al utilizar Amazon S3?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Transferencia de datos de más de 5 MB a Amazon S3",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Transferencia de datos a Amazon S3",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Transferencia de datos a otras regiones de AWS",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Transferencia de datos de Amazon S3 a Amazon CloudFront",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "C"
+      ],
+      "explicacion": "La transferencia entre regiones normalmente genera cargos; la entrada desde Internet y la transferencia a CloudFront generalmente no.",
+      "reglaParaMemorizar": "Entre regiones = posible cargo.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261110-042607).png"
+    },
+    {
+      "id": 4,
+      "modulo": "Amazon S3",
+      "pregunta": "¿Qué afirmaciones describen a Amazon S3? (Seleccione DOS).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Los nombres de los Bucket son específicos de la cuenta de AWS y deben ser únicos dentro de cada cuenta de AWS.",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Los datos que se almacenan de forma predeterminada en un S3 Bucket son públicos, y esta configuración debe desactivarse para que los datos sean privados.",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Se puede utilizar para alojamiento web estático.",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Los nombres de los Bucket son universales, y deben ser únicos entre todos los nombres de los Bucket existentes en Amazon S3.",
+          "esCorrecta": true
+        },
+        {
+          "id": "E",
+          "texto": "Se puede utilizar para alojamiento web dinámico.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "C",
+        "D"
+      ],
+      "explicacion": "S3 admite sitios estáticos y los buckets de propósito general del espacio global requieren nombres únicos dentro de la partición de AWS.",
+      "reglaParaMemorizar": "S3 = sitio estático + nombre único.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261110-042650).png"
+    },
+    {
+      "id": 5,
+      "modulo": "Fundamentos de AWS",
+      "pregunta": "¿Qué enunciado describe mejor a AWS?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "AWS proporciona infraestructura en las instalaciones compatible con todos los tipos y tamaños de empresas.",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "AWS entrega servicios web a través de proveedores de nube de terceros.",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "AWS es un proveedor de servicios de nube seguro que ofrece muchos servicios para ayudar a las empresas a escalar y crecer.",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "AWS es un minorista web que vende millones de productos a un precio competitivo.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "C"
+      ],
+      "explicacion": "AWS ofrece servicios de nube bajo demanda para construir y escalar soluciones.",
+      "reglaParaMemorizar": "AWS = proveedor de nube.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261110-042952).png"
+    },
+    {
+      "id": 6,
+      "modulo": "Fundamentos de AWS",
+      "pregunta": "¿Qué categorías de servicios proporciona AWS? (Seleccione DOS).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Computación",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Financiero",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Almacenamiento",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Seguros",
+          "esCorrecta": false
+        },
+        {
+          "id": "E",
+          "texto": "Médico",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A",
+        "C"
+      ],
+      "explicacion": "Computación y almacenamiento son categorías de servicios de infraestructura de AWS.",
+      "reglaParaMemorizar": "EC2 computa; S3 almacena.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261110-043030).png"
+    },
+    {
+      "id": 7,
+      "modulo": "Fundamentos de AWS",
+      "pregunta": "¿Qué herramientas pueden utilizar los clientes para crear y administrar recursos en la nube de AWS? (Seleccione TRES).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "AWS Fargate",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "AWS Management Console",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "AWS software development kits (SDK)",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "AWS Direct Connect",
+          "esCorrecta": false
+        },
+        {
+          "id": "E",
+          "texto": "AWS CLI",
+          "esCorrecta": true
+        },
+        {
+          "id": "F",
+          "texto": "Amazon Aurora",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B",
+        "C",
+        "E"
+      ],
+      "explicacion": "La consola, los SDK y CLI permiten crear y administrar recursos por interfaces visuales, código y comandos.",
+      "reglaParaMemorizar": "Console + SDK + CLI.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261110-043106).png"
+    },
+    {
+      "id": 8,
+      "modulo": "Fundamentos de AWS",
+      "pregunta": "¿Qué recurso proporciona la documentación de AWS?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Tutoriales y proyectos",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Guías de lenguajes de programación",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Materiales de cursos de formación técnica",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Contactos de soporte",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A"
+      ],
+      "explicacion": "La documentación oficial incluye tutoriales y ejemplos prácticos de proyectos.",
+      "reglaParaMemorizar": "Documentación = guías y tutoriales.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261110-043159).png"
+    },
+    {
+      "id": 9,
+      "modulo": "Modelos de servicio y despliegue",
+      "pregunta": "¿Qué modelo de informática en la nube le da a un usuario la habilidad de utilizar inmediatamente un servicio sin tener que ejecutar ni administrar recursos?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Contenedores como servicio (CaaS)",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Plataforma como servicio (PaaS)",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Software como servicio (SaaS)",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Infraestructura como servicio (IaaS)",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "C"
+      ],
+      "explicacion": "SaaS entrega una aplicación lista para usar sin administrar su infraestructura.",
+      "reglaParaMemorizar": "SaaS = usar.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261110-043321).png"
+    },
+    {
+      "id": 10,
+      "modulo": "Modelos de servicio y despliegue",
+      "pregunta": "¿Qué modelo de servicio de nube le da al usuario un mayor control sobre los recursos de tecnologías de la información (TI), como acceso a las características de redes, equipos (virtuales o en hardware dedicado) y espacio para el almacenamiento de datos?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Software como servicio (SaaS)",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Modelo híbrido",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Plataforma como servicio (PaaS)",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Infraestructura como servicio (IaaS)",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D"
+      ],
+      "explicacion": "IaaS proporciona control sobre red, máquinas virtuales y almacenamiento; el cliente administra el SO y aplicaciones.",
+      "reglaParaMemorizar": "IaaS = más control.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261112-051512).png"
+    },
+    {
+      "id": 11,
+      "modulo": "Modelos de servicio y despliegue",
+      "pregunta": "Una empresa tiene un centro de datos en las instalaciones y también ejecuta una parte de su infraestructura en la nube. ¿Qué modelo de implementación de la informática en la nube describe mejor este escenario?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Nube dedicada",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Nube pública",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Nube privada",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Nube híbrida",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D"
+      ],
+      "explicacion": "La nube híbrida combina infraestructura local y servicios de nube.",
+      "reglaParaMemorizar": "Local + nube = híbrida.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261112-051545).png"
+    },
+    {
+      "id": 12,
+      "modulo": "Modelos de servicio y despliegue",
+      "pregunta": "¿Qué escenario es un ejemplo de software como servicio (SaaS) de la informática en la nube?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "El desarrollador administra las actualizaciones, los parches y la adquisición de recursos. El proveedor de terceros solo es responsable del hardware.",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "El desarrollador implementa código en el entorno de nube que el proveedor de terceros mantiene.",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "El desarrollador mantiene los servidores virtuales, los sistemas operativos y los datos a fin de tener un mayor control sobre los recursos.",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "El proveedor de terceros administra la adquisición de recursos y la aplicación. El desarrollador es responsable del contenido de la aplicación.",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D"
+      ],
+      "explicacion": "En SaaS el proveedor opera la aplicación y recursos; el cliente gestiona su contenido y accesos.",
+      "reglaParaMemorizar": "SaaS = aplicación administrada.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261112-051621).png"
+    },
+    {
+      "id": 13,
+      "modulo": "Modelos de servicio y despliegue",
+      "pregunta": "Un desarrollador de software se centra en la implementación de código que se ejecuta en la nube de AWS. ¿Qué modelo de servicio de nube utiliza este desarrollador?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Software como servicio (SaaS)",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Plataforma como servicio (PaaS)",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "Modelo híbrido",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Infraestructura como servicio (IaaS)",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B"
+      ],
+      "explicacion": "PaaS permite desplegar código en una plataforma administrada sin gestionar servidores directamente.",
+      "reglaParaMemorizar": "PaaS = programar.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261112-051713).png"
+    },
+    {
+      "id": 14,
+      "modulo": "Infraestructura global",
+      "pregunta": "¿Qué es una zona de disponibilidad?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Centros de datos que no tienen aislamiento de fallas porque están agrupados",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Un área geográfica aislada",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Todos los centros de datos en un radio de 100 millas",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Uno o más centros de datos construidos con aislamiento de fallas",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D"
+      ],
+      "explicacion": "Una AZ comprende uno o más centros de datos con aislamiento de fallas.",
+      "reglaParaMemorizar": "AZ = aislamiento.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261112-052050).png"
+    },
+    {
+      "id": 15,
+      "modulo": "Infraestructura global",
+      "pregunta": "¿Qué es una región de AWS?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Un área geográfica en los Estados Unidos",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Un grupo de centros de datos en un radio de 100 millas",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Un área geográfica en el mundo",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Un centro único de datos",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "C"
+      ],
+      "explicacion": "Una región es un área geográfica que contiene zonas de disponibilidad.",
+      "reglaParaMemorizar": "Región = ubicación geográfica.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261112-052138).png"
+    },
+    {
+      "id": 16,
+      "modulo": "Infraestructura global",
+      "pregunta": "¿Cuántas zonas de disponibilidad hay en una región de AWS?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Cuatro o más",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Dos o más",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Un mínimo de tres",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Una a dos",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "C"
+      ],
+      "explicacion": "El material de AWS describe regiones con un mínimo de tres AZ; no confundir con el diseño de aplicaciones en dos AZ.",
+      "reglaParaMemorizar": "Región = mínimo tres AZ (curso).",
+      "estado": "requiere_revision",
+      "fuente": "image(20261112-052157).png"
+    },
+    {
+      "id": 17,
+      "modulo": "Infraestructura global",
+      "pregunta": "¿Qué es Amazon CloudFront?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Una red de entrega de contenido (CDN) que entrega contenido en una única ubicación geográfica",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Una red dedicada que entrega contenido a los usuarios finales que se encuentran en la misma zona de disponibilidad",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Una red global de entrega de contenido (CDN) que entrega contenido a los usuarios finales con latencia reducida",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Un servicio que trabaja con proveedores externos para entregar contenido en el “ idioma local del usuario final",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "C"
+      ],
+      "explicacion": "CloudFront distribuye contenido desde ubicaciones perimetrales para reducir latencia.",
+      "reglaParaMemorizar": "CloudFront = CDN global.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261112-052309).png"
+    },
+    {
+      "id": 18,
+      "modulo": "Virtualización",
+      "pregunta": "¿Qué afirmaciones describen los beneficios de la virtualización? (Seleccione DOS).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Se pueden ejecutar varias máquinas virtuales en un único equipo.",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Las máquinas virtuales pueden reducir la cantidad de recursos informáticos desaprovechados de servidores subutilizados.",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "Una maquina virtual no necesita un sistema operativo.",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Todo el hardware y el software se pueden virtualizar.",
+          "esCorrecta": false
+        },
+        {
+          "id": "E",
+          "texto": "La implementación de máquinas virtuales puede reducir la resiliencia.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A",
+        "B"
+      ],
+      "explicacion": "La virtualización permite compartir hardware entre máquinas virtuales y aprovechar recursos ociosos.",
+      "reglaParaMemorizar": "Un host, varias VM.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261112-054154).png"
+    },
+    {
+      "id": 19,
+      "modulo": "Precios y facturación",
+      "pregunta": "¿Qué tipos de transferencia de datos son gratuitos para Amazon S3? (Seleccione DOS).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Transferencia de datos entrantes desde Internet a Amazon S3",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Transferencia de datos salientes de Amazon S3 a Amazon EC2 en diferentes regiones",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Transferencia de datos entrantes de Amazon EC2 a Amazon S3 en diferentes regiones",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Transferencia de datos salientes de Amazon S3 a Internet",
+          "esCorrecta": false
+        },
+        {
+          "id": "E",
+          "texto": "Transferencia de datos salientes de Amazon S3 a Amazon CloudFront en la misma región",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "A",
+        "E"
+      ],
+      "explicacion": "La entrada a S3 desde Internet y la salida a CloudFront no tienen cargo de transferencia en el escenario indicado; otras operaciones pueden costar.",
+      "reglaParaMemorizar": "Entrada S3 + S3 a CloudFront.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261112-054631).png"
+    },
+    {
+      "id": 20,
+      "modulo": "Precios y facturación",
+      "pregunta": "¿Qué opciones de pago están disponibles para la mayoría de las instancias reservadas de Amazon EC2? (Seleccione TRES).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Sin pago anticipado",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Pago en cuotas",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Pago por hora",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Pago trimestral",
+          "esCorrecta": false
+        },
+        {
+          "id": "E",
+          "texto": "Pago parcial anticipado",
+          "esCorrecta": true
+        },
+        {
+          "id": "F",
+          "texto": "Pago total anticipado",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "A",
+        "E",
+        "F"
+      ],
+      "explicacion": "Las opciones de pago de RI son No Upfront, Partial Upfront y All Upfront.",
+      "reglaParaMemorizar": "Sin, parcial, total.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261112-054733).png"
+    },
+    {
+      "id": 21,
+      "modulo": "Precios y facturación",
+      "pregunta": "¿Que afirmaciones describen los beneficios de usar la calculadora de precios de AWS? (Seleccione TRES).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Puede ayudar a identificar oportunidades para la reducción de costes.",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Brinda a los clientes la capacidad de crear estimaciones para sus casos de uso de AWS.",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "Brinda a los clientes la capacidad de crear presupuestos anuales, trimestrales, mensuales o incluso diarios según las necesidades de su negocio.",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Estima los precios mensuales de los servicios.",
+          "esCorrecta": true
+        },
+        {
+          "id": "E",
+          "texto": "Ofrece un conjunto de informes predeterminados que brindan información sobre los factores de precios y las tendencias de uso.",
+          "esCorrecta": false
+        },
+        {
+          "id": "F",
+          "texto": "Brinda a los clientes la capacidad de establecer un periodo de tiempo personalizado y ver el uso de datos a niveles mensuales o diarios.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A",
+        "B",
+        "D"
+      ],
+      "explicacion": "Pricing Calculator permite modelar casos de uso, estimar costes mensuales y comparar configuraciones para ahorrar.",
+      "reglaParaMemorizar": "Calculadora = estimar antes de gastar.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261112-054825).png"
+    },
+    {
+      "id": 22,
+      "modulo": "Precios y facturación",
+      "pregunta": "¿Cuáles son las categorías que más influyen en los precios de AWS? (Seleccione TRES).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Cargos por terminación del servicio",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Almacenamiento",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "Computación",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Redes y entrega de contenido",
+          "esCorrecta": false
+        },
+        {
+          "id": "E",
+          "texto": "Transferencia de datos",
+          "esCorrecta": true
+        },
+        {
+          "id": "F",
+          "texto": "Compras de hardware",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B",
+        "C",
+        "E"
+      ],
+      "explicacion": "Computación, almacenamiento y transferencia de datos son los tres factores clásicos de precios de AWS.",
+      "reglaParaMemorizar": "Computar, guardar, transferir.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261112-054919).png"
+    },
+    {
+      "id": 23,
+      "modulo": "Precios y facturación",
+      "pregunta": "¿Qué servicio de AWS pueden usar los clientes para crear estimaciones, compartir una estimación mediante un enlace único y volver a consultar cualquier estimación directamente a través de un navegador?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "AWS Cloud Economics Center",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Calculadora de precios de AWS",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "AWS Cost Explorer",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "AWS Trusted Advisor",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B"
+      ],
+      "explicacion": "Pricing Calculator permite crear y compartir estimaciones mediante enlaces.",
+      "reglaParaMemorizar": "Estimación compartible = Pricing Calculator.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261112-055018).png"
+    },
+    {
+      "id": 24,
+      "modulo": "Fundamentos de redes",
+      "pregunta": "¿Qué afirmación describe la dirección de control de acceso a medios (MAC) y cómo la utiliza la tarjeta de interfaz de red (NIC)?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Es un identificador que no se puede cambiar. La NIC solo la utiliza para identificar al remitente.",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Es un identificador lógico único. La NIC la utiliza para identificar datos del remitente y del receptor.",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Es un identificador que se puede volver a asignar o cambiar. La NIC la utiliza para identificar datos del remitente y del receptor.",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Es un identificador físico único que asigna el fabricante. La NIC la utiliza para identificar datos del remitente y del receptor.",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D"
+      ],
+      "explicacion": "La MAC identifica interfaces en capa 2 y se usa para origen y destino. La MAC efectiva puede modificarse o aleatorizarse.",
+      "reglaParaMemorizar": "MAC = capa 2, interfaz física.",
+      "estado": "requiere_revision",
+      "fuente": "image(20261114-060129).png"
+    },
+    {
+      "id": 25,
+      "modulo": "Fundamentos de redes",
+      "pregunta": "¿En qué capa del modelo de interconexión de sistemas abiertos (OSI) se consideran los datos un mensaje o un marco?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Capa 1",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Capa 3",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Capa 2",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Capa 4",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "C"
+      ],
+      "explicacion": "La capa de enlace de datos maneja tramas (frames).",
+      "reglaParaMemorizar": "Capa 2 = trama.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261114-060328).png"
+    },
+    {
+      "id": 26,
+      "modulo": "Amazon VPC y subredes",
+      "pregunta": "¿Qué afirmación describe una Amazon Virtual Private Cloud (Amazon VPC)?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Es una red local.",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Le permite crear una red privada en la nube de AWS.",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "Solo se utiliza para administrar redes públicas en la nube de AWS.",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Es un servicio web de sistema de nombres de dominio (DNS) escalable y de alta disponibilidad.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B"
+      ],
+      "explicacion": "Una VPC es una red virtual aislada lógicamente en AWS.",
+      "reglaParaMemorizar": "VPC = red privada virtual.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261114-060944).png"
+    },
+    {
+      "id": 27,
+      "modulo": "Amazon VPC y subredes",
+      "pregunta": "¿Cuál es el propósito de una tabla de enrutamiento?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Solo es responsable del tráfico de red en una subred.",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Limita el tráfico permitiendo solo direcciones IP especificadas.",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Determina a dónde se dirige todo el tráfico por fuera de la Virtual Private Cloud (VPC).",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Determina a dónde se dirige el tráfico de red dentro de la Virtual Private Cloud (VPC).",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D"
+      ],
+      "explicacion": "Las tablas de rutas determinan el destino y siguiente salto del tráfico, tanto interno como externo.",
+      "reglaParaMemorizar": "Ruta = hacia dónde va el tráfico.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261114-061113).png"
+    },
+    {
+      "id": 28,
+      "modulo": "Amazon VPC y subredes",
+      "pregunta": "¿Qué recurso se debe especificar cuando se crea una Virtual Private Cloud (VPC)?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Sistema Linux",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Equilibrador de carga de Elastic Load Balancing",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Instancia de Amazon Elastic Compute Cloud (Amazon EC2)",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Intervalo de direcciones IP",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D"
+      ],
+      "explicacion": "Se especifica un intervalo de direcciones IP mediante CIDR.",
+      "reglaParaMemorizar": "VPC necesita CIDR.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261114-061237).png"
+    },
+    {
+      "id": 29,
+      "modulo": "Amazon VPC y subredes",
+      "pregunta": "¿Cuales son las razones para crear una subred? (Seleccione DOS opciones).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Asignar una dirección IP estática específica",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Agregar direcciones IP adicionales a una subred que ya existe",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Dividir una red en subredes más pequeñas y eficientes",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Reducir el número de redes que se deben administrar",
+          "esCorrecta": false
+        },
+        {
+          "id": "E",
+          "texto": "Reducir el tráfico de red",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "C",
+        "E"
+      ],
+      "explicacion": "La segmentación divide redes y puede reducir tráfico innecesario, especialmente de difusión en redes tradicionales.",
+      "reglaParaMemorizar": "Subred = dividir y reducir tráfico.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261114-061645).png"
+    },
+    {
+      "id": 30,
+      "modulo": "Amazon VPC y subredes",
+      "pregunta": "Un administrador crea una subred con un rango de enrutamiento entre dominios sin clases (CIDR) de 10.0.0.0/24. ¿Cuántas direcciones IP puede asignar el administrador a los hosts en esta subred?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "256",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "1024",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "24",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "512",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A"
+      ],
+      "explicacion": "Un /24 contiene 256 direcciones totales. En IPv4 convencional hay 254 asignables; AWS reserva cinco, dejando 251. Ninguna opción da el número real de hosts asignables.",
+      "reglaParaMemorizar": "/24 = 256 totales, 251 en AWS.",
+      "estado": "requiere_revision",
+      "fuente": "image(20261114-061955).png"
+    },
+    {
+      "id": 31,
+      "modulo": "Amazon VPC y subredes",
+      "pregunta": "¿Qué afirmación describe una máscara de subred?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Se utiliza para hacer privada una subred.",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Oculta la dirección de difusión en un intervalo de direcciones IP.",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Define los hosts en una red que tiene una dirección IP estática.",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Define qué sección de una dirección IP identifica la red y qué sección de una dirección IP identifica los hosts.",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D"
+      ],
+      "explicacion": "La máscara determina los bits que corresponden a la red y los que identifican hosts.",
+      "reglaParaMemorizar": "Máscara = red + host.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261114-062024).png"
+    },
+    {
+      "id": 32,
+      "modulo": "Amazon VPC y subredes",
+      "pregunta": "¿Qué notación de enrutamiento entre dominios sin clase (CIDR) define el intervalo más pequeño de direcciones IP, en los que la “x” representa un dígito?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "xxx.xxx.xxx.xxx/16",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "xxx.xxx.xxx.xxx/31",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "xxx.xxx.xxx.xxx/24",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "xxx.xxx.xxx.xxx/8",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B"
+      ],
+      "explicacion": "Cuanto mayor es el prefijo CIDR, menos bits quedan para hosts; /31 tiene dos direcciones totales.",
+      "reglaParaMemorizar": "Prefijo mayor = bloque menor.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261114-062311).png"
+    },
+    {
+      "id": 33,
+      "modulo": "Beneficios de la nube",
+      "pregunta": "¿Cuáles son los beneficios de pasar los gastos fijos a gastos variables? (Seleccione DOS).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Se paga únicamente cuando se consumen todos los recursos informáticos",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Posibilidad de invertir en centros de datos conforme a las previsiones",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Se paga únicamente por lo que se consume",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Compra de servidores físicos según sea necesario",
+          "esCorrecta": false
+        },
+        {
+          "id": "E",
+          "texto": "Compra de propiedades e inmuebles según sea necesario",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "C"
+      ],
+      "explicacion": "Pagar solo por consumo es el beneficio inequívoco. El segundo beneficio conceptual es evitar inversión previa en infraestructura, pero ninguna otra opción lo expresa correctamente.",
+      "reglaParaMemorizar": "Gasto variable = pagar por uso, sin inversión previa.",
+      "estado": "requiere_revision",
+      "fuente": "image(20261114-062512).png"
+    },
+    {
+      "id": 34,
+      "modulo": "Beneficios de la nube",
+      "pregunta": "¿Qué significa el concepto de economías de escala masivas en términos de informática en la nube?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Los ahorros se pueden transferir a los clientes cuando más clientes usan AWS.",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Los ahorros se pueden transferir a los clientes cuando AWS crea más centros de datos.",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "La informática en la nube tiene un coste variable menor cuando la economía es buena.",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "El coste de la informática en la nube se reduce cuando los clientes usan los servicios escalados.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A"
+      ],
+      "explicacion": "La demanda agregada permite al proveedor reducir costes unitarios y trasladar ahorros a clientes.",
+      "reglaParaMemorizar": "Más clientes = economías de escala.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261114-062544).png"
+    },
+    {
+      "id": 35,
+      "modulo": "Beneficios de la nube",
+      "pregunta": "¿Cuál es el beneficio de la programación en un entorno de nube?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Un desarrollador necesita pocas habilidades de programación para crear aplicaciones complejas.",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "El entorno de nube encuentra de forma automática errores en un código de aplicación.",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "El tiempo necesario para acceder a los recursos informáticos es menor.",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "El entorno de nube brinda los datos utilizados para probar una aplicación.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "C"
+      ],
+      "explicacion": "El aprovisionamiento bajo demanda reduce el tiempo para acceder a recursos.",
+      "reglaParaMemorizar": "Nube = agilidad.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261114-062854).png"
+    },
+    {
+      "id": 36,
+      "modulo": "Amazon EC2",
+      "pregunta": "¿Cuál de las siguientes acciones conserva los datos en una instancia de Amazon EC2 que utiliza un almacén de instancias como volumen raíz?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Hibernar",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Terminar",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Detener",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Reiniciar",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D"
+      ],
+      "explicacion": "Instance Store conserva datos al reiniciar; no es persistente ante terminación o pérdida del host. Una instancia con raíz Instance Store no admite detener o hibernar.",
+      "reglaParaMemorizar": "Instance Store: reboot sí, terminate no.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261114-064405).png"
+    },
+    {
+      "id": 37,
+      "modulo": "Amazon EC2",
+      "pregunta": "¿Cuáles de las siguientes afirmaciones son verdaderas sobre los grupos de seguridad para las instancias de Amazon EC2? (Seleccione DOS).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Permiten añadir reglas que permiten el tráfico procedente de fuentes determinadas.",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Permiten todo el tráfico entrante de forma predeterminada.",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Permiten todo el tráfico saliente de forma predeterminada.",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Una instancia EC2 solo puede utilizar un grupo de seguridad.",
+          "esCorrecta": false
+        },
+        {
+          "id": "E",
+          "texto": "Permiten añadir reglas que deniegan el tráfico procedente de fuentes determinadas.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A",
+        "C"
+      ],
+      "explicacion": "Los grupos de seguridad admiten reglas allow y normalmente permiten todo el tráfico saliente al crearse; son stateful.",
+      "reglaParaMemorizar": "SG = allow, salida abierta por defecto.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261114-064431).png"
+    },
+    {
+      "id": 38,
+      "modulo": "Amazon EC2",
+      "pregunta": "Una empresa necesita ejecutar una aplicación que sea tolerante a fallas y que tolere interrupciones en AWS. ¿Qué modelo de precios se ajustaría mejor a sus requisitos y les ayudaría a reducir los costes tanto como sea posible?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Instancias bajo demanda",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Instancias reservadas",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Instancias dedicadas",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Instancias tipo spot",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D"
+      ],
+      "explicacion": "Spot aprovecha capacidad sobrante con descuentos y puede ser interrumpida.",
+      "reglaParaMemorizar": "Tolera interrupciones = Spot.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261114-064513).png"
+    },
+    {
+      "id": 39,
+      "modulo": "Responsabilidad compartida",
+      "pregunta": "¿De qué es responsable AWS según el modelo de responsabilidad compartida de AWS?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Seguridad en la nube",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Seguridad fuera de la nube",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Seguridad dentro y de la nube",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Seguridad de la nube",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D"
+      ],
+      "explicacion": "AWS protege infraestructura física, hardware y servicios subyacentes.",
+      "reglaParaMemorizar": "AWS = seguridad DE la nube.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261114-064827).png"
+    },
+    {
+      "id": 40,
+      "modulo": "Responsabilidad compartida",
+      "pregunta": "¿Qué área de inquietud aborda el modelo de responsabilidad compartida de AWS además de la seguridad?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Precio",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Rendimiento",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Conformidad",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Disponibilidad",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "C"
+      ],
+      "explicacion": "La responsabilidad compartida se aplica a seguridad y conformidad.",
+      "reglaParaMemorizar": "Seguridad + compliance.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261114-064859).png"
+    },
+    {
+      "id": 41,
+      "modulo": "Responsabilidad compartida",
+      "pregunta": "¿De qué tarea es responsable el cliente según el modelo de responsabilidad compartida de AWS?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Asegurarse de que los usuarios hayan introducido un ID de usuario y una contraseña antes de usar una aplicación",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Proteger el edificio físico donde se ejecutan los servidores",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Aislar las instancias de servidor virtual en la infraestructura",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Aplicar actualizaciones de seguridad del sistema operativo a los servidores que ejecutan un servicio administrado de AWS",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A"
+      ],
+      "explicacion": "El cliente administra identidades, autenticación y acceso a sus aplicaciones.",
+      "reglaParaMemorizar": "Cliente = seguridad EN la nube.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261114-064947).png"
+    },
+    {
+      "id": 42,
+      "modulo": "Responsabilidad compartida",
+      "pregunta": "¿Qué modelo de informática en la nube requiere que AWS administre la seguridad de la infraestructura en su totalidad?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Software como servicio (SaaS)",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Contenedores como servicio (CaaS)",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Plataforma como servicio (PaaS)",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Infraestructura como servicio (IaaS)",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A"
+      ],
+      "explicacion": "SaaS delega la mayor parte de la pila al proveedor. AWS protege la infraestructura física también en los otros modelos; el enunciado es ambiguo.",
+      "reglaParaMemorizar": "SaaS = mayor gestión del proveedor.",
+      "estado": "requiere_revision",
+      "fuente": "image(20261114-065044).png"
+    },
+    {
+      "id": 43,
+      "modulo": "Bases de datos y SQL",
+      "pregunta": "¿Cuáles son las características principales de una base de datos NoSQL? (Seleccione DOS opciones).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Las bases de datos NoSQL tienen un esquema flexible.",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Las bases de datos NoSQL utilizan modelos de datos que no se basan en tablas relacionales.",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "Las bases de datos NoSQL funcionan bien con las aplicaciones de administración de relación con el cliente (CRM) o las aplicaciones de sistema de planificación de recursos empresariales (ERP).",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "| | Las bases de datos NoSQL pueden ejecutar consultas transaccionales o analíticas.",
+          "esCorrecta": false
+        },
+        {
+          "id": "E",
+          "texto": "Las bases de datos NoSQL utilizan un escalado vertical.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A",
+        "B"
+      ],
+      "explicacion": "NoSQL favorece esquemas flexibles y modelos no relacionales, como documentos y clave-valor.",
+      "reglaParaMemorizar": "NoSQL = flexible, no relacional.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261114-065632).png"
+    },
+    {
+      "id": 44,
+      "modulo": "Bases de datos y SQL",
+      "pregunta": "¿Cuál enunciado define a la integridad referencial?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Los valores de clave externa deben coincidir con un valor de clave primaria existente.",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "El valor de clave primaria coincide con una clave externa existente.",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "El sistema de administración de bases de datos (DBMS) impone las reglas y limitaciones.",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Las columnas tienen restricciones automáticas de claves primarias y externas.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A"
+      ],
+      "explicacion": "Una clave externa no nula debe referenciar una clave válida de la tabla relacionada.",
+      "reglaParaMemorizar": "FK apunta a PK existente.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261114-070125).png"
+    },
+    {
+      "id": 45,
+      "modulo": "Bases de datos y SQL",
+      "pregunta": "¿Cuál es el propósito de las statements del lenguaje de definición de datos (DDL) en el lenguaje de consulta estructurada (SQL)?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Se utilizan para crear y modificar la estructura de una base de datos.",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Se utilizan para realizar consultas en los datos en los objetos de esquema.",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Se utilizan para ver, cambiar y manipular datos de una tabla.",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Se utilizan para controlar el acceso a los datos de una base de datos.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A"
+      ],
+      "explicacion": "DDL define la estructura: CREATE, ALTER y DROP.",
+      "reglaParaMemorizar": "DDL = estructura.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261114-070200).png"
+    },
+    {
+      "id": 46,
+      "modulo": "Bases de datos y SQL",
+      "pregunta": "¿Qué palabra clave se utiliza habitualmente con columnas individuales para garantizar que la columna recuperada tenga valores únicos?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "DIFFERENCE",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "DISTINCT",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "ORDER BY",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "UNIQUE",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B"
+      ],
+      "explicacion": "SELECT DISTINCT elimina duplicados del conjunto de resultados.",
+      "reglaParaMemorizar": "DISTINCT = sin repetidos.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261115-060633).png"
+    },
+    {
+      "id": 47,
+      "modulo": "Bases de datos y SQL",
+      "pregunta": "Un desarrollador de base de datos escribió una consulta que incluye la cláusula ORDER BY 3. ¿Qué efecto tendrá esta cláusula ORDER BY en la consulta de Lenguaje de consulta estructurada (SQL)?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "El resultado de la consulta excluirá datos que tengan un valor de 3 para la tercera columna en la cláusula SELECT de la statement SQL.",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "El resultado de la consulta se ordenará por la tercera tabla en la cláusula FROM de la statement SQL.",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "El resultado de la consulta solo incluirá datos que tengan un valor de 3 para la tercera columna en la cláusula SELECT de la statement SQL.",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "El resultado de la consulta se ordenará por la tercera consulta en la cláusula SELECT en la statement SQL.",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D"
+      ],
+      "explicacion": "ORDER BY 3 ordena por la tercera expresión del SELECT; la opción dice consulta, pero debe entenderse como columna o expresión.",
+      "reglaParaMemorizar": "ORDER BY n = posición del SELECT.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261115-061512).png"
+    },
+    {
+      "id": 48,
+      "modulo": "Bases de datos y SQL",
+      "pregunta": "Si un desarrollador de base de datos desea limitar los resultados de una consulta solo a los clientes con ventas que sean de más de 5000 unidades, ¿cuál cláusula de Lenguaje de consulta estructurado (SQL) debe usar?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "HAVING SUM(sales) > 5000",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "WHERE SUM(sales) > 5000",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "GROUP BY SUM(sales) > 5000",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "HAVING sales < 5000",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A"
+      ],
+      "explicacion": "HAVING filtra grupos tras la agregación SUM; WHERE filtra filas antes de agrupar.",
+      "reglaParaMemorizar": "HAVING = filtro de agregados.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261115-061730).png"
+    },
+    {
+      "id": 49,
+      "modulo": "Bases de datos y SQL",
+      "pregunta": "¿Cuáles son dos formas de usar la statement INSERT INTO? (Seleccione DOS opciones).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Agregar un nuevo registro a una tabla",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Agregar nuevos datos a una tabla con un número de encabezados diferente",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Agregar nuevos datos a una base de datos",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Limpiar los datos en un archivo de valores separados por comas (CSV)",
+          "esCorrecta": false
+        },
+        {
+          "id": "E",
+          "texto": "Crear una nueva tabla",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A",
+        "C"
+      ],
+      "explicacion": "INSERT INTO agrega filas a tablas, directamente con VALUES o a partir de SELECT.",
+      "reglaParaMemorizar": "INSERT = agregar filas.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261115-062213).png"
+    },
+    {
+      "id": 50,
+      "modulo": "Amazon RDS",
+      "pregunta": "¿Qué tarea se puede realizar de forma automática por Amazon Relational Database Service (Amazon RDS) o de forma manual por un usuario?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Copias de seguridad periódicas",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Parches del sistema operativo (SO)",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Configuración de bases de datos",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Aprovisionamiento de hardware",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A"
+      ],
+      "explicacion": "RDS permite copias automatizadas y snapshots manuales.",
+      "reglaParaMemorizar": "RDS = backups automáticos y manuales.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261115-062441).png"
+    },
+    {
+      "id": 51,
+      "modulo": "Amazon RDS",
+      "pregunta": "¿Qué opción se debe especificar primero a la hora de crear una instancia de base de datos (DB) en Amazon Relational Database Service (Amazon RDS)?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Seleccionar el motor de base de datos",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Elegir una región de Amazon Web Services (AWS)",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "Elegir un identificador de instancias de bases de datos",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Conectarse a la instancia de base de datos",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B"
+      ],
+      "explicacion": "Primero se elige la región donde se creará la instancia; en el formulario de creación se selecciona el motor.",
+      "reglaParaMemorizar": "Región primero, luego motor.",
+      "estado": "requiere_revision",
+      "fuente": "image(20261115-062532).png"
+    },
+    {
+      "id": 52,
+      "modulo": "Amazon RDS",
+      "pregunta": "¿Qué caso de uso representa un motivo para utilizar Amazon Relational Database Service (Amazon RDS) en lugar de otras soluciones de base de datos?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Personalización del sistema de administración de bases de datos relacionales (RDBMS)",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Solicitudes y preguntas simples de GET o PUT",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Transacciones o consultas complejas",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Compatibilidad con modelos de datos de valor clave y de documentos",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "C"
+      ],
+      "explicacion": "RDS admite motores relacionales con SQL, joins y transacciones.",
+      "reglaParaMemorizar": "RDS = SQL y consultas complejas.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261115-062632).png"
+    },
+    {
+      "id": 53,
+      "modulo": "Amazon DynamoDB",
+      "pregunta": "¿Qué tipo de base de datos es Amazon DynamoDB?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Base de datos jerárquica",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Base de datos NoSQL",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "Base de datos relacional",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Base de datos en la memoria",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B"
+      ],
+      "explicacion": "DynamoDB es una base NoSQL administrada de clave-valor y documentos.",
+      "reglaParaMemorizar": "DynamoDB = NoSQL.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261115-062935).png"
+    },
+    {
+      "id": 54,
+      "modulo": "Amazon DynamoDB",
+      "pregunta": "¿Cómo hace Amazon DynamoDB para garantizar alta disponibilidad y escalabilidad en todas las regiones?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Mediante el uso de un conjunto de varias claves de partición",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Mediante el uso de un conjunto de uno o más atributos",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Mediante el uso de un conjunto de varios elementos",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Mediante el uso de un conjunto de varias réplicas de tablas",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D"
+      ],
+      "explicacion": "DynamoDB replica datos entre AZ; Global Tables permite réplicas en varias regiones configuradas.",
+      "reglaParaMemorizar": "Réplicas = disponibilidad.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261115-063014).png"
+    },
+    {
+      "id": 55,
+      "modulo": "Amazon DynamoDB",
+      "pregunta": "¿Cuál enunciado describe el concepto de partición en Amazon DynamoDB?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "La partición consiste en la replicación manual de tablas en las diferentes zonas de disponibilidad dentro de una región de AWS.",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Cada partición tiene un tamaño máximo de aproximadamente 10 MB.",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "A medida que los datos aumentan, la clave compuesta particiona e indexa los datos de la tabla",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "La partición es una asignación de almacenamiento en una tabla.",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D"
+      ],
+      "explicacion": "Una partición es una unidad de almacenamiento administrada por DynamoDB.",
+      "reglaParaMemorizar": "Partición = bloque de almacenamiento.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261115-063205).png"
+    },
+    {
+      "id": 56,
+      "modulo": "Amazon DynamoDB",
+      "pregunta": "¿Cuál enunciado sobre las claves de partición de Amazon DynamoDB es verdadero?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Las claves de partición identifican de forma única a cada elemento de la tabla",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Una clave primaria consta de dos claves de partición",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "No puede haber dos elementos en una tabla que compartan las mismas claves de partición",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Una tabla puede tener dos claves de partición",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A"
+      ],
+      "explicacion": "La partition key identifica un elemento si es la clave primaria simple. Con clave compuesta, la combinación partition key + sort key es única; la partition key puede repetirse.",
+      "reglaParaMemorizar": "Clave simple única; compuesta = PK + SK.",
+      "estado": "requiere_revision",
+      "fuente": "image(20261115-063252).png"
+    },
+    {
+      "id": 57,
+      "modulo": "Amazon DynamoDB",
+      "pregunta": "¿Cuántas maneras existen en Amazon DynamoDB para recuperar datos desde una tabla DynamoDB?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Dos maneras",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Tres maneras",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "Una manera",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Cuatro maneras",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B"
+      ],
+      "explicacion": "Las tres operaciones básicas son GetItem, Query y Scan; existen otras APIs como BatchGetItem.",
+      "reglaParaMemorizar": "GetItem, Query, Scan.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261115-063322).png"
+    },
+    {
+      "id": 58,
+      "modulo": "Fundamentos de seguridad",
+      "pregunta": "¿Cuál es el rol de la confidencialidad en la triada de la Confidencialidad, la Integridad y la Disponibilidad (CIA)?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Garantiza que solo los usuarios autorizados tengan acceso a los recursos.",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Garantiza que los recursos estén accesibles cuando sean necesarios.",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Garantiza que no se hayan alterado los recursos.",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Garantiza que los recursos no contengan información privada.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A"
+      ],
+      "explicacion": "Confidencialidad restringe acceso a sujetos autorizados.",
+      "reglaParaMemorizar": "C = quién puede ver.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261119-161551).png"
+    },
+    {
+      "id": 59,
+      "modulo": "Fundamentos de seguridad",
+      "pregunta": "¿Qué perspectiva de seguridad se encarga de garantizar que no se alteren los datos que se envían por una red?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Integridad",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Disponibilidad",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Confidencialidad",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Escalabilidad",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A"
+      ],
+      "explicacion": "Integridad protege de alteraciones no autorizadas durante transmisión o almacenamiento.",
+      "reglaParaMemorizar": "I = datos intactos.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261119-161636).png"
+    },
+    {
+      "id": 60,
+      "modulo": "Fundamentos de seguridad",
+      "pregunta": "¿Qué tipo de amenaza ataca un recurso con varias solicitudes de diferentes sistemas?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Malware",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Ataque de intermediario",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Phishing",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "(9) Denegación de servicio distribuido (DDoS)",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D"
+      ],
+      "explicacion": "DDoS utiliza múltiples sistemas para saturar recursos y afectar disponibilidad.",
+      "reglaParaMemorizar": "Distribuido + saturación = DDoS.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261119-161702).png"
+    },
+    {
+      "id": 61,
+      "modulo": "Fundamentos de seguridad",
+      "pregunta": "¿Cuál opción es una fase del ciclo de vida de la seguridad?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Aprovisionamiento",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Implementación",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Construcción",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Prevención",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D"
+      ],
+      "explicacion": "Prevención establece controles para reducir la posibilidad de incidentes.",
+      "reglaParaMemorizar": "Prevenir antes del ataque.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261119-161832).png"
+    },
+    {
+      "id": 62,
+      "modulo": "Protección de redes",
+      "pregunta": "¿Qué tipo de vulnerabilidad de seguridad expone los protocolos y servicios de una red?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Suplantación de protocolo de Internet (IP)",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Análisis de tráfico",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Análisis de puerto",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Mapeo de red",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "C"
+      ],
+      "explicacion": "El análisis de puertos identifica puertos abiertos y servicios expuestos.",
+      "reglaParaMemorizar": "Puerto abierto = servicio detectable.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-040548).png"
+    },
+    {
+      "id": 63,
+      "modulo": "Protección de redes",
+      "pregunta": "¿Cuál protocolo debe deshabilitar o asegurar un administrador de red para proteger contra los ataques de descubrimiento de redes?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Protocolo de transferencia de archivos (FTP)",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Protocolo simple de transferencia de correo (SMTP)",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Protocolo de mensaje de control de Internet (ICMP)",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Protocolo de transferencia de hipertexto (HTTP)",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "C"
+      ],
+      "explicacion": "ICMP puede revelar hosts mediante solicitudes echo. Conviene limitar mensajes innecesarios, no bloquear indiscriminadamente todo ICMP.",
+      "reglaParaMemorizar": "Descubrimiento ping = ICMP.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-040621).png"
+    },
+    {
+      "id": 64,
+      "modulo": "Protección de redes",
+      "pregunta": "¿Cuál enunciado describe completamente el propósito de un firewall?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Filtra los paquetes entrantes de una red.",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Filtra los paquetes del protocolo de transferencia de hipertexto (HTTP) de una red.",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Filtra los paquetes entrantes y salientes de una red.",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Filtra los paquetes salientes de una red.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "C"
+      ],
+      "explicacion": "Un firewall filtra conexiones entrantes y salientes según reglas.",
+      "reglaParaMemorizar": "Firewall = entrada y salida.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-040645).png"
+    },
+    {
+      "id": 65,
+      "modulo": "Protección de redes",
+      "pregunta": "¿Qué es un grupo de seguridad de Amazon Web Services (AWS)?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Un grupo de servidores que se han configurado para proteger los recursos",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Una aplicación que está instalada en una instancia de Amazon Elastic Compute cloud (Amazon EC2) para protegerla",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Un firewall que protege las instancias de Amazon Elastic Compute Cloud (Amazon EC2)",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Un grupo de usuarios que tienen permitido acceder a los recursos",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "C"
+      ],
+      "explicacion": "Security Groups son firewalls virtuales asociados a interfaces de red de recursos como EC2.",
+      "reglaParaMemorizar": "SG = firewall de EC2.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-040742).png"
+    },
+    {
+      "id": 66,
+      "modulo": "Protección de redes",
+      "pregunta": "). ¿Qué herramienta de Amazon Web Services (AWS) evalúa su cuenta y proporciona recomendaciones para ayudarle a seguir las prácticas recomendadas de AWS?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "AWS Shield",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Amazon GuardDuty",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "AWS Trusted Advisor",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "AWS CloudTrail",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "C"
+      ],
+      "explicacion": "Trusted Advisor evalúa recursos y recomienda mejoras según buenas prácticas.",
+      "reglaParaMemorizar": "Advisor = recomienda.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-041846).png"
+    },
+    {
+      "id": 67,
+      "modulo": "Cifrado",
+      "pregunta": "¿Cuál de las siguientes afirmaciones es una ventaja del cifrado simétrico?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "La clave es un secreto compartido entre el remitente y el receptor.",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Se considera más seguro que el cifrado asimétrico.",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "El cifrado utiliza una clave privada y una clave pública (un par de claves).",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Tiene una estructura de cifrado compleja.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A"
+      ],
+      "explicacion": "El cifrado simétrico usa una clave secreta compartida; su ventaja habitual es el rendimiento. Compartir la clave también supone un reto.",
+      "reglaParaMemorizar": "Simétrico = misma clave.",
+      "estado": "requiere_revision",
+      "fuente": "image(20261122-042041).png"
+    },
+    {
+      "id": 68,
+      "modulo": "Cifrado",
+      "pregunta": "¿Qué protocolos utilizan el método de cifrado híbrido como un modo de cifrado? (Seleccione DOS opciones).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Protocolo de transferencia de hipertexto (HTTP)",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Transport Layer Security (TLS)",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "Protocolo de control de transmisión (TCP)",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Capa de conexión segura (SSL)",
+          "esCorrecta": true
+        },
+        {
+          "id": "E",
+          "texto": "Protocolo de Internet (IP)",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B",
+        "D"
+      ],
+      "explicacion": "TLS y su predecesor SSL combinan técnicas asimétricas y simétricas. SSL está obsoleto.",
+      "reglaParaMemorizar": "TLS = híbrido; SSL histórico.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-042203).png"
+    },
+    {
+      "id": 69,
+      "modulo": "Prevención: PKI",
+      "pregunta": "¿Quién firma y emite certificados para las entidades y administra la confianza y las relaciones?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Listas de revocación",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Autoridades de certificación (CA)",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "Certificados",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Autoridades de registro (RA)",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B"
+      ],
+      "explicacion": "Una CA emite y firma certificados y establece una cadena de confianza.",
+      "reglaParaMemorizar": "CA = firma y emite.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-042734).png"
+    },
+    {
+      "id": 70,
+      "modulo": "Prevención: PKI",
+      "pregunta": "¿Qué recurso se utiliza con la capa de conexión segura (SSL) y la Transport Layer Security (TLS) para establecer una conexión segura entre el cliente y el servidor?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Plantilla de certificados",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Clave privada y pública",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "Autoridad de certificación (CA)",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Solicitud de firma del certificado",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B"
+      ],
+      "explicacion": "Los pares de claves permiten autenticar y establecer secretos en TLS; la clave privada no se comparte.",
+      "reglaParaMemorizar": "TLS = claves pública y privada.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-042919).png"
+    },
+    {
+      "id": 71,
+      "modulo": "Prevención: PKI",
+      "pregunta": "¿Cómo se logra la confianza entre dos partes cuando se usan principios de infraestructura de clave publica (PKI)?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "A través de las claves publicas y privadas que validan la identidad de las partes",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "A través del intercambio de claves privadas que validan la identidad de las partes",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "A través del intercambio de claves publicas que validan la identidad de las partes",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "A través de una autoridad de certificación (CA) externa que valida la identidad de las partes",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D"
+      ],
+      "explicacion": "La confianza PKI se establece validando certificados mediante una autoridad confiable.",
+      "reglaParaMemorizar": "PKI = confianza mediante CA.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-043246).png"
+    },
+    {
+      "id": 72,
+      "modulo": "Prevención: PKI",
+      "pregunta": "¿Qué es un certificado digital?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Es una credencial electrónica que se utiliza para representar la identidad en línea de una persona, computadora u otra entidad",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Una credencial electrónica que identifica la red utilizada por las dos entidades que se comunican",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Un componente que cifra los datos intercambiados entre dos entidades que se comunican",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Un archivo que contiene permisos de seguridad",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A"
+      ],
+      "explicacion": "Un certificado vincula una identidad con una clave pública mediante una firma digital.",
+      "reglaParaMemorizar": "Certificado = identidad electrónica.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-043421).png"
+    },
+    {
+      "id": 73,
+      "modulo": "Prevención: AWS IAM",
+      "pregunta": "¿Cuál es el objetivo de la administración de identidades?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Administrar las respuestas a las amenazas de seguridad según el tipo de usuario",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Administrar usuarios y sus permisos de acceso",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "Identificar todos los sistemas a los que pueden acceder los usuarios",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Detectar amenazas de seguridad e informar a los usuarios",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B"
+      ],
+      "explicacion": "La gestión de identidades controla usuarios y permisos.",
+      "reglaParaMemorizar": "IAM = quién y qué puede hacer.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-044928).png"
+    },
+    {
+      "id": 74,
+      "modulo": "Prevención: AWS IAM",
+      "pregunta": "¿Qué pasos de seguridad se realizan durante un inicio de sesión típico? (Seleccione DOS opciones).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Autorización",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Consolidación",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Prevención",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Activación",
+          "esCorrecta": false
+        },
+        {
+          "id": "E",
+          "texto": "Autenticación",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "A",
+        "E"
+      ],
+      "explicacion": "La autenticación comprueba identidad y la autorización determina permisos.",
+      "reglaParaMemorizar": "Autenticación = quién; autorización = qué.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-045003).png"
+    },
+    {
+      "id": 75,
+      "modulo": "Prevención: AWS IAM",
+      "pregunta": "¿Cuál es un ejemplo de un factor de autenticación?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Algoritmo de cifrado",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Servidor de autenticación",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Autenticación multifactor (MFA)",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Política de firewall",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "C"
+      ],
+      "explicacion": "MFA es la opción esperada; técnicamente combina factores, no es un factor individual. Los factores son conocimiento, posesión e inherencia.",
+      "reglaParaMemorizar": "MFA = dos o más factores.",
+      "estado": "requiere_revision",
+      "fuente": "image(20261122-045018).png"
+    },
+    {
+      "id": 76,
+      "modulo": "Prevención: AWS IAM",
+      "pregunta": "¿Dónde se definen las acciones que un usuario puede o no realizar?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "En un documento de política adjunto al usuario",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "En un documento de permisos",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "En la configuración para el grupo al que se agregó el usuario",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "En la configuración de usuario de AWS Identity and Access Management (IAM)",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A"
+      ],
+      "explicacion": "Las políticas IAM definen acciones permitidas o denegadas y pueden asociarse a usuarios, grupos o roles.",
+      "reglaParaMemorizar": "Policy = permisos.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-045107).png"
+    },
+    {
+      "id": 77,
+      "modulo": "Detección",
+      "pregunta": "¿Qué métodos de infección usa el malware? (Seleccione DOS opciones).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Sitio web no de confianza",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Huella dactilar",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Correo no deseado",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Dispositivo extraíble",
+          "esCorrecta": false
+        },
+        {
+          "id": "E",
+          "texto": "Tarjeta de acceso a edificio",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A",
+        "C"
+      ],
+      "explicacion": "Sitios maliciosos y correo no deseado son vectores habituales; los dispositivos extraíbles también pueden transmitir malware. La pregunta admite más de dos posibilidades técnicas.",
+      "reglaParaMemorizar": "Enlaces, adjuntos y USB = riesgo.",
+      "estado": "requiere_revision",
+      "fuente": "image(20261122-045706).png"
+    },
+    {
+      "id": 78,
+      "modulo": "Detección",
+      "pregunta": "¿Cuál opción es una contramedida para el malware?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Registrar el acceso de los usuarios.",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Analizar los sistemas con regularidad.",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "Escalar los servidores virtuales.",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Supervisar los enrutadores.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B"
+      ],
+      "explicacion": "Los análisis periódicos ayudan a detectar software malicioso.",
+      "reglaParaMemorizar": "Malware = escaneo regular.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-050017).png"
+    },
+    {
+      "id": 79,
+      "modulo": "Detección",
+      "pregunta": "¿Cuál es una fuente de datos que Amazon GuardDuty usa para analizar y detectar amenazas?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Resultados de análisis de antivirus",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Alertas de firewall",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Registros de flujo de Virtual Private Cloud (VPC)",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Notificaciones por correo electrónico",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "C"
+      ],
+      "explicacion": "GuardDuty analiza señales como VPC Flow Logs, eventos de CloudTrail y registros DNS.",
+      "reglaParaMemorizar": "GuardDuty = detecta amenazas en logs.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-050254).png"
+    },
+    {
+      "id": 80,
+      "modulo": "AWS Trusted Advisor",
+      "pregunta": "¿Cuál de las siguientes son categorías en las que AWS Trusted Advisor proporciona recomendaciones? (Seleccione DOS opciones).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Planificación de migración",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Detección de amenazas",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Diseño de base de datos",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Tolerancia a errores",
+          "esCorrecta": true
+        },
+        {
+          "id": "E",
+          "texto": "Optimización de costos",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D",
+        "E"
+      ],
+      "explicacion": "Trusted Advisor incluye tolerancia a fallos y optimización de costes entre sus categorías.",
+      "reglaParaMemorizar": "Advisor = ahorro y resiliencia.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-050558).png"
+    },
+    {
+      "id": 81,
+      "modulo": "AWS Trusted Advisor",
+      "pregunta": "¿Cuál de las siguientes verificaciones de AWS Trusted Advisor se encuentran disponibles sin coste? (Seleccione DOS opciones).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Registro de bucket de Amazon Simple Storage Service (Amazon S3)",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Uso de AWS Identity and Access Management (IAM)",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "Politica de AWS Identity and Access Management (IAM)",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Autenticación multifactor (MFA) en la cuenta raíz",
+          "esCorrecta": true
+        },
+        {
+          "id": "E",
+          "texto": "Baja utilización de las instancias de Amazon Elastic Compute Cloud (Amazon EC2)",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B",
+        "D"
+      ],
+      "explicacion": "En el material del curso, uso de IAM y MFA de cuenta raíz son comprobaciones básicas; el acceso a comprobaciones depende del plan y cambios del servicio.",
+      "reglaParaMemorizar": "IAM + MFA raíz = comprobaciones básicas.",
+      "estado": "requiere_revision",
+      "fuente": "image(20261122-050620).png"
+    },
+    {
+      "id": 82,
+      "modulo": "AWS Trusted Advisor",
+      "pregunta": "¿Cuál es el umbral de límite de servicio que causa una advertencia de la verificación de límites de servicio?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "80 %",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "70%",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "90 %",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "95 %",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A"
+      ],
+      "explicacion": "El umbral clásico de advertencia de límites es 80% de la cuota; algunos controles pueden diferir.",
+      "reglaParaMemorizar": "80% = advertencia.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-050657).png"
+    },
+    {
+      "id": 83,
+      "modulo": "AWS Trusted Advisor",
+      "pregunta": "AWS Trusted Advisor genera el estado de verificación rojo (signo de exclamación [!]) Grupo de seguridad: Acceso sin restricciones. ¿Qué acción se debe tomar?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Agregar una regla que prohíba todo acceso entrante al grupo de seguridad identificado.",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Transformar todas las subredes públicas en subredes privadas.",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Agregar reglas que brinden acceso a algunas direcciones IP autorizadas al grupo de seguridad identificado.",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Agregar una regla que prohíba todo acceso saliente al grupo de seguridad identificado.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "C"
+      ],
+      "explicacion": "Se deben sustituir reglas abiertas por fuentes autorizadas; añadir reglas restrictivas sin retirar las abiertas no basta.",
+      "reglaParaMemorizar": "Acceso abierto = restringir origen.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-050729).png"
+    },
+    {
+      "id": 84,
+      "modulo": "Seguridad de cuentas AWS",
+      "pregunta": "¿Qué se utiliza para autenticar el usuario raíz de la cuenta de Amazon Web Services (AWS) en la Consola de administración de AWS?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Par de claves",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Dirección de correo electrónico",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "Clave de acceso",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Nombre de usuario",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B"
+      ],
+      "explicacion": "El correo identifica al usuario raíz al iniciar sesión; también se requiere autenticación mediante contraseña y MFA según corresponda.",
+      "reglaParaMemorizar": "Root = correo electrónico.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-051015).png"
+    },
+    {
+      "id": 85,
+      "modulo": "Seguridad de cuentas AWS",
+      "pregunta": "¿Qué tipos de permisos tiene un usuario raíz de una cuenta de Amazon Web Services (AWS)?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Acceso completo a todos los recursos y servicios de AWS",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Acceso de administrador a todos los servicios de AWS excepto los servicios administrados",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Acceso completo solo a los servicios de seguridad de AWS",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Acceso de administrador a AWS Identity y Access Management (IAM) y acceso limitado a todos los demás servicios",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A"
+      ],
+      "explicacion": "Root tiene acceso completo por defecto; en cuentas miembro pueden aplicar restricciones de Organizations.",
+      "reglaParaMemorizar": "Root = máximo privilegio.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-051047).png"
+    },
+    {
+      "id": 86,
+      "modulo": "Seguridad de cuentas AWS",
+      "pregunta": "¿Qué servicio de registro se debe habilitar de inmediato como una práctica recomendada al crear una cuenta de Amazon Web Services (AWS)?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Amazon CloudWatch",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "AWS Config",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "AWS Control Tower",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "AWS CloudTrail",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D"
+      ],
+      "explicacion": "CloudTrail registra actividad de API y cuenta. Existe historial de eventos por defecto; crear un trail permite conservación continua.",
+      "reglaParaMemorizar": "CloudTrail = auditoría de acciones.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-051119).png"
+    },
+    {
+      "id": 87,
+      "modulo": "Seguridad de cuentas AWS",
+      "pregunta": "¿Cuál es la práctica recomendada al crear un usuario en una cuenta de Amazon Web Services (AWS)?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Incluir números en el nombre de usuario.",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Crear una contraseña que contenga 10 caracteres.",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Solicitar la autenticación multifactor (MFA) para obtener acceso.",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Crear una contraseña que sea igual al nombre de usuario inicialmente.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "C"
+      ],
+      "explicacion": "MFA añade protección frente al robo de contraseñas.",
+      "reglaParaMemorizar": "Usuario nuevo = MFA.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-051201).png"
+    },
+    {
+      "id": 88,
+      "modulo": "Conformidad de seguridad",
+      "pregunta": "¿Qué tipo de requisitos abordan los estándares de conformidad de seguridad? (Seleccione DOS opciones).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Facturación",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Contractual",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "Contabilidad",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Costo",
+          "esCorrecta": false
+        },
+        {
+          "id": "E",
+          "texto": "Normativa",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "B",
+        "E"
+      ],
+      "explicacion": "La conformidad aborda obligaciones contractuales y normativas.",
+      "reglaParaMemorizar": "Compliance = contratos + normas.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-051417).png"
+    },
+    {
+      "id": 89,
+      "modulo": "Conformidad de seguridad",
+      "pregunta": "¿Qué tipo de infracción de conformidad puede tener como resultado sanciones penales?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Estándares abiertos",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Nivel de productividad",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Prácticas recomendadas",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Regulaciones gubernamentales",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D"
+      ],
+      "explicacion": "Incumplir regulaciones gubernamentales puede producir sanciones legales, según la jurisdicción y conducta.",
+      "reglaParaMemorizar": "Regulación = consecuencias legales.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-051441).png"
+    },
+    {
+      "id": 90,
+      "modulo": "Conformidad de seguridad",
+      "pregunta": "¿Cuál enunciado identifica de forma precisa quién es el responsable de satisfacer los requisitos de conformidad de seguridad en Amazon Web Services (AWS) Cloud?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "El cliente, AWS y un socio tercero son responsables de satisfacer los estándares de conformidad.",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "El cliente y AWS comparten la responsabilidad de satisfacer los estándares de conformidad.",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "El cliente es exclusivamente responsable de satisfacer los estándares de conformidad.",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "AWS es exclusivamente responsable de satisfacer los estándares de conformidad.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B"
+      ],
+      "explicacion": "AWS y el cliente comparten obligaciones de seguridad y conformidad según su ámbito.",
+      "reglaParaMemorizar": "Compliance compartido.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-051459).png"
+    },
+    {
+      "id": 91,
+      "modulo": "Conformidad de seguridad",
+      "pregunta": "¿Cuál es el objetivo del programa de administración de riesgo del negocio de Amazon Web Services (AWS)?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Crear y mantener políticas de seguridad",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Proporcionar capacitación de seguridad para los clientes de AWS",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Analizar aplicaciones de clientes una vez al año",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Analizar filtraciones de seguridad",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A"
+      ],
+      "explicacion": "El programa de gestión de riesgos establece y mantiene políticas para gestionar riesgos de seguridad.",
+      "reglaParaMemorizar": "Riesgo = políticas y controles.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-051800).png"
+    },
+    {
+      "id": 92,
+      "modulo": "Conformidad de seguridad",
+      "pregunta": "¿Cómo comparte la información de seguridad Amazon Web Services (AWS)? (Seleccione DOS opciones).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Al publicar la información mediante el portal de AWS Artifact.",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Al proporcionar toda la documentación para la conformidad de seguridad de AWS en el sitio web de AWS.",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Al publicar las prácticas de control en un boletín de noticias al que los clientes se pueden suscribir.",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Al publicar información acerca de la seguridad de AWS en documentos técnicos.",
+          "esCorrecta": true
+        },
+        {
+          "id": "E",
+          "texto": "Al publicar informes de auditoría independientes de terceros, según lo solicitado por los clientes.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A",
+        "D"
+      ],
+      "explicacion": "AWS publica documentos técnicos y facilita informes de cumplimiento mediante Artifact; ciertos informes de terceros también están disponibles bajo condiciones.",
+      "reglaParaMemorizar": "Artifact + documentos técnicos.",
+      "estado": "requiere_revision",
+      "fuente": "image(20261122-051819).png"
+    },
+    {
+      "id": 93,
+      "modulo": "Ciclo de seguridad: análisis",
+      "pregunta": "¿Qué paso se realiza durante el análisis de causa raíz (RCA)?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Describir las acciones a realizar cuando ocurre un problema.",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Establecer una línea de tiempo, que comience con las operaciones normales y finalice con la ocurrencia del problema.",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "Establecer una previsión de cuándo volverá a la normalidad el negocio.",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Implementar medidas preventivas para proteger los recursos.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B"
+      ],
+      "explicacion": "El RCA reconstruye los eventos desde la operación normal hasta el problema para identificar causas.",
+      "reglaParaMemorizar": "RCA = línea de tiempo.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-052509).png"
+    },
+    {
+      "id": 94,
+      "modulo": "Ciclo de seguridad: análisis",
+      "pregunta": "¿Cuál es un beneficio de la supervisión y el registro?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Aumenta el rendimiento de la aplicación.",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Proporciona los datos que se utilizan para la identificación del problema.",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "Corrige las amenazas a la seguridad.",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Previene las amenazas a la seguridad.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B"
+      ],
+      "explicacion": "Métricas y registros aportan evidencia para identificar problemas y analizarlos.",
+      "reglaParaMemorizar": "Logs = evidencia.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-052549).png"
+    },
+    {
+      "id": 95,
+      "modulo": "Ciclo de seguridad: análisis",
+      "pregunta": "Una empresa acaba de recuperarse de una interrupción de seguridad causada por un troyano y está realizando un análisis de la seguridad. ¿Qué preguntas debe hacerse la empresa durante el análisis? (Seleccione DOS opciones).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "¿Puede la empresa presentar cargos contra el atacante?",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "¿Cómo se debe informar al público sobre la filtración?",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "¿Quién es el administrador que permitió que ocurriera la filtración?",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "¿Cómo se podría haber evitado la vulneración?",
+          "esCorrecta": true
+        },
+        {
+          "id": "E",
+          "texto": "¿Cómo se produjo la vulneración?",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D",
+        "E"
+      ],
+      "explicacion": "El análisis posterior investiga cómo ocurrió la vulneración y cómo prevenir su repetición.",
+      "reglaParaMemorizar": "Cómo ocurrió + cómo evitarlo.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-052607).png"
+    },
+    {
+      "id": 96,
+      "modulo": "Ciclo de seguridad: análisis",
+      "pregunta": "¿Qué define a una política de supervisión? (Seleccione DOS opciones).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "¿Dónde se almacena la política?",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "¿Cuándo se aprueba la política?",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "¿Quién revisa la política?",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "¿Quién realiza la supervisión?",
+          "esCorrecta": true
+        },
+        {
+          "id": "E",
+          "texto": "¿Qué recursos se supervisan?",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D",
+        "E"
+      ],
+      "explicacion": "Una política de supervisión identifica responsables y recursos que se supervisan.",
+      "reglaParaMemorizar": "Quién monitorea + qué monitorea.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-052640).png"
+    },
+    {
+      "id": 97,
+      "modulo": "Ciclo de seguridad: análisis",
+      "pregunta": "¿Qué fase del ciclo de vida de la seguridad examina lo que ocurrió tras una vulneración de la seguridad?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Análisis",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Prevención",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Detección",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Respuestas",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A"
+      ],
+      "explicacion": "La fase de análisis examina el incidente y busca causas y mejoras.",
+      "reglaParaMemorizar": "Después del incidente = análisis.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-052714).png"
+    },
+    {
+      "id": 98,
+      "modulo": "AWS Config",
+      "pregunta": "¿Qué es AWS Config?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Una herramienta que ayuda a reducir costos.",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Una herramienta que proporciona asesoría sobre cómo asegurar las redes en Amazon Web Services (AWS).",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Una herramienta que registra las llamadas a la interfaz de programa de aplicación (API) a los servicios de Amazon Web Services (AWS) en archivos de registro.",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Una herramienta que realiza un seguimiento de los cambios en los recursos.",
+          "esCorrecta": true
+        }
+      ],
+      "respuestasCorrectas": [
+        "D"
+      ],
+      "explicacion": "AWS Config registra cambios de configuración e historial de recursos.",
+      "reglaParaMemorizar": "Config = historial de configuración.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-052936).png"
+    },
+    {
+      "id": 99,
+      "modulo": "AWS Config",
+      "pregunta": "¿Cuáles son las características de AWS Config? (Seleccione DOS opciones).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Enviar una notificación cuando se detecta una amenaza para los recursos de Amazon Web Services (AWS).",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "Recuperar inventario de los recursos de Amazon Web Services (AWS).",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "Enviar notificaciones cuando se produzca un cambio de configuración en un recurso de Amazon Web Services (AWS).",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "Proporcionar a los usuarios la capacidad de establecer grupos de seguridad más seguros.",
+          "esCorrecta": false
+        },
+        {
+          "id": "E",
+          "texto": "Comprobar el uso del servicio para ver los límites del servicio.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B",
+        "C"
+      ],
+      "explicacion": "Config mantiene inventario y puede notificar cambios de configuración.",
+      "reglaParaMemorizar": "Inventario + cambios + notificaciones.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-053004).png"
+    },
+    {
+      "id": 100,
+      "modulo": "AWS Config",
+      "pregunta": "¿Qué herramienta pueden usar los clientes para definir reglas personalizadas para AWS Config?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "AWS Elastic Beanstalk",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "AWS Lambda",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "Amazon API Gateway",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "AWS CloudFormation",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B"
+      ],
+      "explicacion": "AWS Lambda permite implementar lógica personalizada de evaluación de reglas de Config.",
+      "reglaParaMemorizar": "Config + Lambda = evaluación con código.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-053030).png"
+    },
+    {
+      "id": 101,
+      "modulo": "AWS Config",
+      "pregunta": "¿Cuáles son las acciones que realiza AWS Config cuando se produce un cambio de configuración en un servicio de Amazon Web Services (AWS)? (Seleccione DOS opciones).",
+      "tipo": "multiple",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "AWS Config corrige el cambio si este infringe una regla de Amazon Web Services (AWS).",
+          "esCorrecta": false
+        },
+        {
+          "id": "B",
+          "texto": "AWS Config registra y luego almacena el cambio en un bucket de Amazon Simple Storage Service (Amazon S3).",
+          "esCorrecta": true
+        },
+        {
+          "id": "C",
+          "texto": "AWS Config usa Amazon Simple Notification Service (Amazon SNS) para enviar una notificación.",
+          "esCorrecta": true
+        },
+        {
+          "id": "D",
+          "texto": "AWS Config llama a AWS Trusted Advisor para evaluar el nivel de seguridad de las aplicaciones.",
+          "esCorrecta": false
+        },
+        {
+          "id": "E",
+          "texto": "AWS Config llama a AWS CloudTrail para registrar el cambio en los archivos de registro.",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "B",
+        "C"
+      ],
+      "explicacion": "Config registra cambios, entrega historial a S3 y puede notificar por SNS cuando se configura.",
+      "reglaParaMemorizar": "Config detecta, S3 almacena, SNS notifica.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-053052).png"
+    },
+    {
+      "id": 102,
+      "modulo": "AWS Config",
+      "pregunta": "¿Cuándo se evalúa una regla de AWS Config asociada con un recurso?",
+      "tipo": "unica",
+      "opciones": [
+        {
+          "id": "A",
+          "texto": "Cuando cambia la configuración del recurso",
+          "esCorrecta": true
+        },
+        {
+          "id": "B",
+          "texto": "Cuando una función de AWS Lambda inicia la evaluación",
+          "esCorrecta": false
+        },
+        {
+          "id": "C",
+          "texto": "Cuando se inicia el recurso",
+          "esCorrecta": false
+        },
+        {
+          "id": "D",
+          "texto": "Cuando se detiene el recurso",
+          "esCorrecta": false
+        }
+      ],
+      "respuestasCorrectas": [
+        "A"
+      ],
+      "explicacion": "Las reglas activadas por cambios se evalúan cuando cambia el recurso; también existen reglas periódicas.",
+      "reglaParaMemorizar": "Cambio = evaluación de conformidad.",
+      "estado": "respuesta_razonada",
+      "fuente": "image(20261122-053128).png"
+    }
+  ]
+}
