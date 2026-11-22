@@ -12,6 +12,7 @@ export function StudyPage() {
   const { data, error, loading, reload, setData } = useAsync(() => api.moduleQuestions(moduleId), [moduleId])
   const storageKey = `studyhub.study.${moduleId}`
   const [filter, setFilter] = useState<Filter>('todas')
+  const [filterIds, setFilterIds] = useState<Set<number>>(new Set())
   const [index, setIndex] = useState(() => Number(localStorage.getItem(storageKey) ?? 0))
   const [selected, setSelected] = useState<string[]>([])
   const [result, setResult] = useState<CheckResult | null>(null)
@@ -20,10 +21,8 @@ export function StudyPage() {
 
   const list = useMemo(() => {
     const qs = data ?? []
-    if (filter === 'pendientes') return qs.filter((q) => q.progress.mastery !== 'dominada')
-    if (filter === 'errores') return qs.filter((q) => q.progress.mastery === 'con_errores')
-    return qs
-  }, [data, filter])
+    return filter === 'todas' ? qs : qs.filter((q) => filterIds.has(q.id))
+  }, [data, filter, filterIds])
   const safeIndex = Math.min(index, Math.max(0, list.length - 1))
   const q = list[safeIndex]
 
@@ -35,6 +34,11 @@ export function StudyPage() {
   if (data.length === 0) return <Empty title="Este módulo no tiene preguntas" />
 
   const update = (id: number, patch: Partial<QuestionPublic>) => setData(data.map((x) => (x.id === id ? { ...x, ...patch } : x)))
+  const applyFilter = (f: Filter) => {
+    const matches = (x: QuestionPublic) => f === 'pendientes' ? x.progress.mastery !== 'dominada' : x.progress.mastery === 'con_errores'
+    setFilterIds(new Set(data.filter(matches).map((x) => x.id)))
+    setFilter(f); setIndex(0)
+  }
   const go = (i: number) => setIndex(Math.max(0, Math.min(list.length - 1, i)))
   const check = async () => {
     if (!q) return
@@ -61,7 +65,7 @@ export function StudyPage() {
         actions={
           <div className="flex rounded-xl border border-night/15 bg-white p-1 text-sm" role="group" aria-label="Filtrar preguntas">
             {(['todas', 'pendientes', 'errores'] as Filter[]).map((f) => (
-              <button key={f} onClick={() => { setFilter(f); setIndex(0) }} aria-pressed={filter === f}
+              <button key={f} onClick={() => applyFilter(f)} aria-pressed={filter === f}
                 className={`rounded-lg px-3 py-1.5 font-medium ${filter === f ? 'bg-night text-white' : 'text-night/70 hover:bg-blush/20'}`}>
                 {f === 'todas' ? 'Todas' : f === 'pendientes' ? 'Sin dominar' : 'Con errores'}
               </button>
