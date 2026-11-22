@@ -194,4 +194,33 @@ public class ApiTests : IClassFixture<TestApp>
         var mine = await _client.GetJson("/api/marks/favorito");
         Assert.Contains(mine.EnumerateArray(), q => q.GetProperty("id").GetInt32() == qid);
     }
+    [Fact]
+    public async Task Public_review_notes_do_not_quote_answer_keys()
+    {
+        var raw = await (await _client.GetAsync($"/api/study/questions/{await QuestionId(33)}")).Content.ReadAsStringAsync();
+        Assert.Contains("reviewNotes", raw);
+        Assert.DoesNotContain("[C]", raw);
+        Assert.DoesNotContain("respuestasCorrectas", raw);
+    }
+
+    [Fact]
+    public async Task Errors_filter_uses_latest_attempt()
+    {
+        var p = await (await _client.PostJson("/api/profiles", new { name = "Filtro errores" })).Json();
+        var profileId = p.GetProperty("id").GetInt32().ToString();
+        var qid = await QuestionId(4);
+        var moduleId = (await _client.GetJson($"/api/study/questions/{qid}")).GetProperty("moduleId").GetInt32();
+        async Task<JsonElement> Send(HttpMethod method, string url, object body)
+        {
+            var req = new HttpRequestMessage(method, url) { Content = JsonContent.Create(body) };
+            req.Headers.Add("X-Profile-Id", profileId);
+            return await (await _client.SendAsync(req)).Json();
+        }
+        var eligible = new { courseId = await CourseId(), moduleIds = new[] { moduleId }, filter = "errores" };
+
+        await Send(HttpMethod.Post, "/api/study/check", new { questionId = qid, selected = new[] { "C" } });
+        Assert.Equal(1, (await Send(HttpMethod.Post, "/api/exams/eligible", eligible)).GetProperty("eligible").GetInt32());
+        await Send(HttpMethod.Post, "/api/study/check", new { questionId = qid, selected = new[] { "C", "D" } });
+        Assert.Equal(0, (await Send(HttpMethod.Post, "/api/exams/eligible", eligible)).GetProperty("eligible").GetInt32());
+    }
 }

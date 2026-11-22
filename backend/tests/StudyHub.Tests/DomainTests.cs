@@ -79,4 +79,30 @@ public class ValidatorTests
         Assert.Contains(r.Issues, i => i.Code == "respuesta_inexistente");
         Assert.Contains(r.Issues, i => i.Code == "conteo_distinto");
     }
+    [Fact]
+    public void Null_entries_are_reported_not_crashing()
+    {
+        var r = BankValidator.Validate(Bank("null"));
+        Assert.False(r.CanCommit);
+        Assert.Contains(r.Issues, i => i.Code == "pregunta_nula");
+        var opt = BankValidator.Validate(Bank(Ok.Replace("\"opciones\":[", "\"opciones\":[null,")));
+        Assert.False(opt.CanCommit);
+        Assert.Contains(opt.Issues, i => i.Code == "opcion_nula");
+    }
+
+    [Fact]
+    public void Option_ids_differing_only_in_case_are_duplicates()
+    {
+        var r = BankValidator.Validate(Bank(Ok.Replace("{\"id\":\"B\"", "{\"id\":\"a\"")));
+        Assert.False(r.CanCommit);
+        Assert.Contains(r.Issues, i => i.Code == "opcion_duplicada");
+    }
+
+    [Fact]
+    public void Structural_question_errors_block_commit()
+    {
+        var r = BankValidator.Validate(Bank(Ok.Replace("\"modulo\":\"M\",", "")));
+        Assert.False(r.CanCommit);
+        Assert.Contains(r.Issues, i => i.Code == "modulo_faltante");
+    }
 }
