@@ -1,0 +1,42 @@
+{
+  "preguntaIdOriginal": 1,
+  "estado": "pendiente_investigacion",
+  "conceptoPrincipal": "Durabilidad de almacenamiento",
+  "contextoEducativo": "",
+  "analisisOpciones": [],
+  "ejemploPractico": "",
+  "errorComun": "Confundir durabilidad con disponibilidad",
+  "reglaParaMemorizarOriginal": "S3 = 11 nueves de durabilidad.",
+  "referencias": [],
+  "diagrama": {
+    "tipo": "comparacion",
+    "titulo": "Durabilidad y disponibilidad",
+    "nodos": [
+      {
+        "id": "s3",
+        "icono": "database",
+        "etiqueta": "Amazon S3"
+      },
+      {
+        "id": "d",
+        "icono": "shield",
+        "etiqueta": "Durabilidad"
+      },
+      {
+        "id": "a",
+        "icono": "activity",
+        "etiqueta": "Disponibilidad"
+      }
+    ],
+    "conexiones": [
+      {
+        "origen": "s3",
+        "destino": "d"
+      },
+      {
+        "origen": "s3",
+        "destino": "a"
+      }
+    ]
+  }
+}
