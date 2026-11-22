@@ -227,8 +227,7 @@ public class ExamService(IAppDbContext db, ICurrentProfile profile, ProgressRead
         var filtered = all.Where(q => config.Filter switch
         {
             ExamFilters.New => snap.For(q.Id).Attempts == 0,
-            ExamFilters.Errors => snap.Attempts.TryGetValue(q.Id, out var a) && a.Any(x => !x.IsCorrect) &&
-                                  snap.For(q.Id).Mastery != Mastery.Mastered,
+            ExamFilters.Errors => snap.For(q.Id).Mastery == Mastery.WithErrors,
             ExamFilters.Favorites => snap.Favorites.Contains(q.Id),
             ExamFilters.Review => snap.Review.Contains(q.Id),
             _ => true,
