@@ -42,7 +42,7 @@ export function ImportPage() {
           <Report report={preview} />
           <div className="flex justify-end gap-2">
             <button className="btn-ghost" onClick={() => choose(null)}>Cancelar</button>
-            <button className="btn-primary" disabled={busy || !preview.canCommit || preview.alreadyImported} onClick={commit}><Upload className="h-4 w-4" /> Confirmar importación</button>
+            <button className="btn-primary" disabled={busy || !preview.canCommit} onClick={commit}><Upload className="h-4 w-4" /> Confirmar importación</button>
           </div>
         </>
       )}
@@ -63,7 +63,7 @@ function Report({ report, committed }: { report: ImportReport; committed?: boole
       <div className={`card flex items-start gap-3 ${ok ? 'border-emerald-200 bg-emerald-50/50' : 'border-coral/30 bg-coral/5'}`}>
         {ok ? <CheckCircle2 className="h-6 w-6 text-emerald-600" aria-hidden /> : <AlertTriangle className="h-6 w-6 text-coral" aria-hidden />}
         <div className="flex-1">
-          <p className="font-bold">{statusText[report.status] ?? report.status}</p>
+          <p className="font-bold">{report.canCommit ? statusText[report.status] ?? report.status : statusText.rechazado}</p>
           <p className="muted">{report.title ?? 'Sin título'} · versión declarada {report.declaredVersion ?? '—'} · {report.fileName}</p>
           {!committed && report.alreadyImported && <p className="mt-1 text-sm text-[#9A5A0B]">Este archivo exacto ya fue importado; confirmar no generará cambios.</p>}
           {committed && report.courseId && <Link to={`/cursos/${report.courseId}`} className="mt-2 inline-block text-sm font-semibold text-rose">Ir al curso →</Link>}
