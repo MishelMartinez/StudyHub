@@ -35,7 +35,7 @@ export function ErrorLogPage() {
                   <span className="ml-auto">{e.errors} error(es) en {e.attempts} intento(s) · último error {fmtDate(e.lastErrorAt)}</span>
                 </div>
                 <p className="font-semibold">{e.text}</p>
-                <p className="text-sm"><span className="text-coral">Tu última respuesta: {e.lastSelected.join(', ') || '—'}</span> · <span className="text-emerald-700">Correcta: {e.correctAnswers.join(', ')}</span></p>
+                <p className="text-sm"><span className="text-coral">Tu última respuesta incorrecta: {e.lastSelected.join(', ') || '—'}</span> · <span className="text-emerald-700">Correcta: {e.correctAnswers.join(', ')}</span></p>
                 {e.memoryRule && <p className="rounded-lg bg-amber/10 p-2 text-sm"><b>Regla:</b> {e.memoryRule}</p>}
                 <Link to={`/estudiar/${e.moduleId}`} className="text-sm font-semibold text-rose">Estudiar módulo →</Link>
               </div>
