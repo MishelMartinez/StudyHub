@@ -26,7 +26,7 @@ public record FeedbackDto(
         return new FeedbackDto(isCorrect, selected.ToList(), s.CorrectAnswers,
             options.Select(o => new OptionFeedbackDto(o.Key, o.Text, o.IsCorrect, sel.Contains(o.Key.ToUpperInvariant()))).ToList(),
             s.Explanation, s.MemoryRule, s.OriginalState, s.Source, s.NeedsReview,
-            Common.ReviewNotes.For(s.OriginalState, s.ValidationIssues));
+            Common.ReviewNotes.For(s.OriginalState, s.ValidationIssues, detailed: true));
     }
 }
 

@@ -55,7 +55,7 @@ public class AdminService(IAppDbContext db)
         return new AdminQuestionDetailDto(
             new AdminQuestionDto(x.Id, x.OriginalId, x.CourseId, x.Course!.Title, x.ModuleId, x.Module.Name, x.Text, x.Type,
                 x.OriginalState, x.HasValidationIssues, x.NeedsReview, x.CurrentVersion),
-            s.Options, s.CorrectAnswers, x.Explanation, x.MemoryRule, x.Source, ReviewNotes.For(x.OriginalState, s.ValidationIssues), versions);
+            s.Options, s.CorrectAnswers, x.Explanation, x.MemoryRule, x.Source, ReviewNotes.For(x.OriginalState, s.ValidationIssues, detailed: true), versions);
     }
 
     public async Task<List<BankVersionDto>> BanksAsync(CancellationToken ct = default)

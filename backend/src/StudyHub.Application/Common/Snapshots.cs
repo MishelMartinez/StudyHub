@@ -36,11 +36,17 @@ public static class ReviewNotes
     public const string OriginalReview =
         "El banco original marca esta pregunta como «requiere revisión»: la respuesta puede ser ambigua o no coincidir con ninguna opción exacta.";
 
-    public static List<string> For(string originalState, IEnumerable<string> validationIssues)
+    public const string ValidationReview =
+        "La validación de importación detectó inconsistencias en esta pregunta (por ejemplo, entre el enunciado y la clave de respuestas).";
+
+    /// <summary>Validation messages can quote the answer key, so they are only detailed once the answer may be revealed.</summary>
+    public static List<string> For(string originalState, IEnumerable<string> validationIssues, bool detailed = false)
     {
         var notes = new List<string>();
         if (originalState == OriginalStates.NeedsReview) notes.Add(OriginalReview);
-        notes.AddRange(validationIssues.Select(i => $"Validación de importación: {i}"));
+        var issues = validationIssues.ToList();
+        if (detailed) notes.AddRange(issues.Select(i => $"Validación de importación: {i}"));
+        else if (issues.Count > 0) notes.Add(ValidationReview);
         return notes;
     }
 }
